@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+
+
+.container{
+    display: grid;
+    grid-template-rows: 60px 1fr auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+   
+    .top_bar{
+        display: none;
+    }
+    .aside2{
+        display: none;
+    }
+
+    .header{
+        grid-area: header;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        .header-wrapper{
+            margin-left: 230px;
+            margin-top: 0;
+            height: 60px; 
+            // background-color: red;
+            .top_menu{
+                background-color: #333;
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    
+                    a{
+                        // background-color: blue;
+                        cursor: pointer;
+                        line-height: 60px;
+                        width: 25%;
+                        overflow: hidden;
+                        position: relative;
+                        border-bottom: 5px solid goldenrod;
+                        color: white;
+                        z-index: 10;
+                       
+                        &:before{
+                            position: relative;
+                           z-index: -1;
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            bottom: -100%;
+                            background-color: goldenrod;
+                            transition: .2s;
+                        }
+                          
+                        &:hover:before{
+                            bottom: 0;
+                        }
+
+                        li{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main{
+        grid-area: main;
+        
+        .main-wrapper{
+            margin-left: 230px;
+           
+// background-color: green;
+            .slides-wrapper{
+                
+                width: 400px;
+                height: 400px;
+                margin: 0 auto;
+                margin-top: 40px;
+                .slides-container{
+                    .slide{
+                       
+                        object-fit: contain;
+                        background-repeat: no-repeat;
+                        height: 400px;
+                    }
+                } 
+            }
+
+            .phone_card-wrapper{
+                margin-top: 30px;
+                .phone_card-container{
+                    // background-color: rebeccapurple;
+                    display: grid;
+                    grid-template-columns: repeat(3,30%);
+                    justify-content: center;
+                    gap: 20px;
+                    width: 100%;
+                    max-width: 60%;
+                    margin: 0 auto;
+
+                    .phone_card{
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 100%;
+                        box-shadow: 1px 1px 3px;
+                        background-color: goldenrod;
+                        color: white;
+                        
+                        &:before{
+                            display: block;
+                            content: "";
+                            padding-top: 100%;
+                        }
+                        
+                        img{
+                            margin-right: 5px;
+                        }
+                    }
+
+                    .phone_card:hover{
+                        background-color: lighten($color: goldenrod, $amount: 10%);
+                    }
+                    
+                }
+            }
+
+            .information-wrapper{
+                 background-color: rgb(212, 209, 209);
+                 margin: 100px 0;
+                 padding: 40px 0;
+
+                .information-container{
+                    color: gray;
+                    margin: 0 20%;
+                    height: fit-content;
+                    min-height: 500px;
+
+                    .heading{
+                        color: black;
+                        font-size: larger;
+                        font-weight: bolder;
+                        margin-bottom: 40px;
+                        text-align: center;
+                    }
+
+                    .information{
+                        border-bottom: 1px solid rgb(241, 241, 241);
+                        padding: 15px 0;
+
+                        p{
+                            cursor: pointer;
+                        }
+                    }
+                    
+                    .list{
+                        display: none;
+                        margin-left: 15px;
+                    }
+
+                    .arrow{
+                        color: goldenrod;
+                    }
+                }
+            }
+        }
+    }
+
+    .aside{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        .aside-wrapper{
+            width: 230px;
+            height: 100vh;
+            border-right: 1px solid gray;
+            background-color: #333;
+           
+            ul{
+                cursor: pointer;
+                padding-top: 100px;
+
+                a{
+                    color: white;
+                    li{
+                         padding: 10px 10px 0;
+                    }
+                       
+                }
+            }
+        }
+    }
+
+    .footer{
+        grid-area: footer;
+        
+        .footer-wrapper{
+            margin-left: 230px;
+background-color: yellow;
+        }
+        
+    }
+}

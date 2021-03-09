@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 60px 1fr auto;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "main" "footer";
+  min-height: 100vh;
+}
+.container .top_bar {
+  display: none;
+}
+.container .aside2 {
+  display: none;
+}
+.container .header {
+  grid-area: header;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+.container .header .header-wrapper {
+  margin-left: 230px;
+  margin-top: 0;
+  height: 60px;
+}
+.container .header .header-wrapper .top_menu {
+  background-color: #333;
+}
+.container .header .header-wrapper .top_menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .header .header-wrapper .top_menu ul a {
+  cursor: pointer;
+  line-height: 60px;
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 5px solid goldenrod;
+  color: white;
+  z-index: 10;
+}
+.container .header .header-wrapper .top_menu ul a:before {
+  position: relative;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  background-color: goldenrod;
+  transition: 0.2s;
+}
+.container .header .header-wrapper .top_menu ul a:hover:before {
+  bottom: 0;
+}
+.container .header .header-wrapper .top_menu ul a li {
+  text-align: center;
+}
+.container .main {
+  grid-area: main;
+}
+.container .main .main-wrapper {
+  margin-left: 230px;
+}
+.container .main .main-wrapper .slides-wrapper {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.container .main .main-wrapper .slides-wrapper .slides-container .slide {
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+.container .main .main-wrapper .phone_card-wrapper {
+  margin-top: 30px;
+}
+.container .main .main-wrapper .phone_card-wrapper .phone_card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 60%;
+  margin: 0 auto;
+}
+.container .main .main-wrapper .phone_card-wrapper .phone_card-container .phone_card {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 1px 3px;
+  background-color: goldenrod;
+  color: white;
+}
+.container .main .main-wrapper .phone_card-wrapper .phone_card-container .phone_card:before {
+  display: block;
+  content: "";
+  padding-top: 100%;
+}
+.container .main .main-wrapper .phone_card-wrapper .phone_card-container .phone_card img {
+  margin-right: 5px;
+}
+.container .main .main-wrapper .phone_card-wrapper .phone_card-container .phone_card:hover {
+  background-color: #e4b849;
+}
+.container .main .main-wrapper .information-wrapper {
+  background-color: #d4d1d1;
+  margin: 100px 0;
+  padding: 40px 0;
+}
+.container .main .main-wrapper .information-wrapper .information-container {
+  color: gray;
+  margin: 0 20%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 500px;
+}
+.container .main .main-wrapper .information-wrapper .information-container .heading {
+  color: black;
+  font-size: larger;
+  font-weight: bolder;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.container .main .main-wrapper .information-wrapper .information-container .information {
+  border-bottom: 1px solid #f1f1f1;
+  padding: 15px 0;
+}
+.container .main .main-wrapper .information-wrapper .information-container .information p {
+  cursor: pointer;
+}
+.container .main .main-wrapper .information-wrapper .information-container .list {
+  display: none;
+  margin-left: 15px;
+}
+.container .main .main-wrapper .information-wrapper .information-container .arrow {
+  color: goldenrod;
+}
+.container .aside {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+}
+.container .aside .aside-wrapper {
+  width: 230px;
+  height: 100vh;
+  border-right: 1px solid gray;
+  background-color: #333;
+}
+.container .aside .aside-wrapper ul {
+  cursor: pointer;
+  padding-top: 100px;
+}
+.container .aside .aside-wrapper ul a {
+  color: white;
+}
+.container .aside .aside-wrapper ul a li {
+  padding: 10px 10px 0;
+}
+.container .footer {
+  grid-area: footer;
+}
+.container .footer .footer-wrapper {
+  margin-left: 230px;
+  background-color: yellow;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
+</head>
+<body>
+
+    <div class="container" id="setVue">
+        <vue-header></vue-header>
+        <vue-aside></vue-aside>
+        <vue-aside2></vue-aside2>
+        <vue-top_bar></vue-top_bar>
+       
+        <main class="main">
+            <div class="main-wrapper">
+                <div class="slides-wrapper">
+                    <div class="slides-container">
+                        <img class="slide" src="./img/phone/samsung_galaxys21Ultra.jpg">
+                        <img class="slide" src="./img/phone/apple_iphone11pro.jpg">
+                        <img class="slide" src="./img/phone/xiaomi_MiNote10.jpg">
+                        <img class="slide" src="./img/phone/oppo_Reno3a.jpg">
+                        <img class="slide" src="./img/phone/google_Pixel5.jpg">
+                    </div>             
+                </div>
+                <div class="phone_card-wrapper">
+                    <div class="phone_card-container">
+                        <div class="phone_card">
+                            <img src="./img/icon/コインタイプの円アイコン.png" alt="">
+                            <p>価格</p>
+                        </div>
+                        <div class="phone_card">
+                            <img src="./img/icon/インストールアイコン.png" alt="">
+                            <p>容量</p>
+                        </div>
+                        <div class="phone_card">
+                            <img src="./img/icon/CPUのフリーアイコン4.png" alt="">
+                            <p>CPU</p>
+                        </div>
+                        <div class="phone_card">
+                            <img src="./img/icon/電池のアイコン素材 その2.png" alt="">
+                            <p>バッテリー</p>
+                        </div>
+                        <div class="phone_card">
+                            <img src="./img/icon/カメラのアイコン素材 7.png" alt="">
+                            <p>カメラ</p>
+                        </div>
+                        <div class="phone_card">
+                            <img src="./img/icon/シェイクアイコン2.png" alt="">
+                            <p>タッチ決済</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <p class="heading">スマートフォンの選び方</p>
+
+                        <div class="information">
+                            <p class="drawer0"><span class="arrow">➤</span>{{question[0]}}</p>
+                            <span class="list0 list">
+                                <p>{{answer[0][0]}}</p>
+                                <p>{{answer[0][1]}}</p>
+                                <p>{{answer[0][2]}}</p>
+                            </span>
+                        </div>
+                        <div class="information">
+                            <p class="drawer1"><span class="arrow">➤</span>{{question[1]}}</p>
+                            <span class="list1 list">
+                                <p>{{answer[1][0]}}</p>
+                                <p>{{answer[1][1]}}</p>
+                                <p>{{answer[1][2]}}</p>
+                                <p>{{answer[1][3]}}</p>
+                            </span>
+                        </div>
+                        <div class="information">
+                            <p class="drawer2"><span class="arrow">➤</span>{{question[2]}}</p>
+                            <span class="list2 list">
+                                <p>{{answer[2][0]}}</p>
+                            </span>
+                        </div>
+                        <div class="information">
+                            <p class="drawer3"><span class="arrow">➤</span>{{question[3]}}</p>
+                            <span class="list3 list">
+                                <p>{{answer[3][0]}}</p>
+                                <p>{{answer[3][1]}}</p>
+                            </span>
+                        </div>
+                        <div class="information">
+                            <p class="drawer4"><span class="arrow">➤</span>{{question[4]}}</p>
+                            <span class="list4 list">
+                                <p>{{answer[4][0]}}</p>
+                                <p>{{answer[4][1]}}</p>
+                            </span>
+                        </div>
+                        <div class="information">
+                            <p class="drawer5"><span class="arrow">➤</span>{{question[5]}}</p>
+                            <span class="list5 list">
+                                <p>{{answer[5][0]}}</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+
+        <footer class="footer">
+            <div class="footer-wrapper">
+                <ul>
+                    <li>サイトマップ</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/Vue.js"></script>
+<script src="./js/JQuery.js"></script>
+<script>
+    $(function(){
+        $('.slides-container').slick({
+            autoplay:true,
+            autoplaySpeed:1000,
+            dots:false,
+            arrows:false,
+            infinite:true,
+            pauseOnHover:false,
+            pauseOnFocus:false,
+        });
+
+        
+
+    });
+</script>
+</body>
+</html>
