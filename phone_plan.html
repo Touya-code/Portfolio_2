@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPhone plan</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
+</head>
+<body>
+    <div class="container" id="setVue">
+        <vue-header></vue-header>
+        <vue-aside></vue-aside>
+        <vue-aside2></vue-aside2>
+        <vue-top_bar></vue-top_bar>
+       
+        <main class="main">
+            <div class="main-wrapper">
+               <div class="plan_list-wrapper">
+                   <p class="heading">プラン一覧</p>
+                    <div class="plan_docomo plan_list-container">
+                        <p class="heading">docomo</p>
+                        <table>
+                            <tr>
+                                <td>プラン名</td>
+                                <td colspan="4">ahamo</td>              
+                            </tr>
+                            <tr>
+                                <td>料金（税抜）</td>
+                                <td>2,700円</td>              
+                            </tr>
+                            <tr>
+                                <td>データ量</td>
+                                <td>20GB</td>
+                            </tr>
+                            <tr>
+                                <td>通信品質</td>
+                                <td colspan="4" align="center">◎</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="plan_au plan_list-container">
+                        <p class="heading">au</p>
+                        <table>
+                            <tr>
+                                <td>プラン名</td>
+                                <td colspan="4">povo</td>              
+                            </tr>
+                            <tr>
+                                <td>料金（税抜）</td>
+                                <td>2,480円</td>              
+                            </tr>
+                            <tr>
+                                <td>データ量</td>
+                                <td>20GB</td>
+                            </tr>
+                            <tr>
+                                <td>通信品質</td>
+                                <td colspan="4" align="center">◎</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="plan_docomo plan_list-container">
+                        <p class="heading">日本通信sim</p>
+                        <table>
+                            <tr>
+                                <td>プラン名</td>
+                                <td colspan="4">合理的20GBプラン</td>              
+                            </tr>
+                            <tr>
+                                <td>料金（税抜）</td>
+                                <td>1,980円</td>              
+                            </tr>
+                            <tr>
+                                <td>データ量</td>
+                                <td>20GB</td>
+                            </tr>
+                            <tr>
+                                <td>通信品質</td>
+                                <td colspan="4" align="center">○</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="plan_rakuten plan_list-container">
+                        <p class="heading">RakuteMobile</p>
+                        <table>
+                            <tr>
+                                <td>プラン名</td>
+                                <td colspan="4">Rakuten UN-LIMIT VI</td>              
+                            </tr>
+                            <tr>
+                                <td>料金（税抜）</td>
+                                <td>0円</td>
+                                <td>980円</td>
+                                <td>1,980円</td>
+                                <td>2,980円</td>              
+                            </tr>
+                            <tr>
+                                <td>データ量</td>
+                                <td>1GB</td>
+                                <td>3GB</td>
+                                <td>20GB</td>
+                                <td>20GB以上</td> 
+                            </tr>
+                            <tr>
+                                <td>通信品質</td>
+                                <td colspan="4" align="center">△</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="plan_uq plan_list-container">
+                        <p class="heading">UQmobile</p>
+                        <table>
+                            <tr>
+                                <td>プラン名</td>
+                                <td colspan="4">くりこしプラン</td>              
+                            </tr>
+                            <tr>
+                                <td>料金（税抜）</td>
+                                <td>1,480円</td>
+                                <td>2,480円</td>
+                                <td>3,480円</td>              
+                            </tr>
+                            <tr>
+                                <td>データ量</td>
+                                <td>3GB</td>
+                                <td>15GB</td>
+                                <td>25GB以上</td> 
+                            </tr>
+                            <tr>
+                                <td>通信品質</td>
+                                <td colspan="4" align="center">○</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="plan_uq plan_list-container">
+                        <p class="heading">mineo</p>
+                        <table>
+                            <tr>
+                                <td>プラン名</td>
+                                <td colspan="4">マイピタ</td>              
+                            </tr>
+                            <tr>
+                                <td>料金（税抜）</td>
+                                <td>1,180円</td>
+                                <td>1,380円</td>
+                                <td>1,780円</td>  
+                                <td>1,980円</td>            
+                            </tr>
+                            <tr>
+                                <td>データ量</td>
+                                <td>1GB</td>
+                                <td>5GB</td>
+                                <td>10GB</td>
+                                <td>20GB以上</td> 
+                            </tr>
+                            <tr>
+                                <td>通信品質</td>
+                                <td colspan="4" align="center">△</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="plan_uq plan_list-container">
+                        <p class="heading">iijmio</p>
+                        <table>
+                            <tr>
+                                <td>プラン名</td>
+                                <td colspan="5">ギガプラン</td>              
+                            </tr>
+                            <tr>
+                                <td>料金（税抜）</td>
+                                <td>780円</td>
+                                <td>980円</td>
+                                <td>1,380円</td>  
+                                <td>1,680円</td>
+                                <td>1,880円</td>            
+                            </tr>
+                            <tr>
+                                <td>データ量</td>
+                                <td>2GB</td>
+                                <td>4GB</td>
+                                <td>8GB</td>
+                                <td>15GB</td> 
+                                <td>20GB</td>
+                            </tr>
+                            <tr>
+                                <td>通信品質</td>
+                                <td colspan="5">△</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="search_plan-wrapper">
+                    <div class="search_plan-container">
+                         <p class="heading">プラン診断</p>
+                         <div class="plan_question question0">
+                             <p>どちらを重視しますか？</p>
+                             <ul>
+                                 <li @click="receive_id.splice(0,1,'0')"><span>通信品質</span></li>
+                                 <li @click="receive_id.splice(0,1,'1')"><span>料金</span></li>
+                             </ul>
+                         </div>
+                         <div class="plan_question question1">
+                             <p>月に何GB利用しますか？</p>
+                             <ul>
+                                 <li @click="receive_id.splice(1,1,'0')"><span>1~10GB</span></li>
+                                 <li @click="receive_id.splice(1,1,'1')"><span>10~20GB</span></li>
+                                 <li @click="receive_id.splice(1,1,'2')"><span>20GB~</span></li>
+                             </ul>
+                         </div>
+                         <div class="plan_question question2">
+                             <p>月に通話をどの程度しますか？</p>
+                             <ul>
+                                 <li @click="receive_id.splice(2,1,'0')"><span>頻繁にする</span></li>
+                                 <li @click="receive_id.splice(2,1,'1')"><span>ほとんどしない</span></li>
+                             </ul>
+                         </div>
+                         <div class="plan_result">
+                             <span class="result_btn heading" @click="planResult">診断結果を見る</span>
+ 
+                             <div class="result">
+                                 <p>{{display_copo}}</p>
+                                 <table>
+                                     <tr>
+                                         <td class="display1">プラン名</td>
+                                         <td class="display2">{{display_plan}}</td>              
+                                     </tr>
+                                     <tr>
+                                         <td class="display1">料金（税抜）</td>
+                                         <td class="display2">{{display_price}}</td>              
+                                     </tr>
+                                     <tr>
+                                         <td class="display1">データ量</td>
+                                         <td class="display2">{{display_GB}}</td>
+                                     </tr>
+                                 </table>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <vue-footer></vue-footer>
+    </div>
+
+<script src="./js/Vue.js"></script>
+<script src="./js/JQuery.js"></script>
+</body>
+</html>

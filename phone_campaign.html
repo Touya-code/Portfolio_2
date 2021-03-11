@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container" id="setVue">
+        <vue-header></vue-header>
+        <vue-aside></vue-aside>
+        <vue-aside2></vue-aside2>
+        <vue-top_bar></vue-top_bar>
+
+        <main class="main">
+            <div class="main-wrapper">
+                <div class="capmpaign_list-wrapper">
+                    <div class="campaign_list-container">
+                        <p>➤キャンペーン一覧</p>
+                        <ul class="campaign_list">
+                            <a href="#Docomo"><li>Docomo</li></a>
+                            <a href="#au"><li>au</li></a>
+                            <a href="#日本通信sim"><li>日本通信sim</li></a>
+                            <a href="#RakuteMobile"><li>RakutenMobile</li></a>
+                            <a href="#UQmobile"><li>UQmobile</li></a>
+                            <a href="#mineo"><li>mineo</li></a>
+                            <a href="#iijmio"><li>iijmio</li></a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="campaign_info-wrapper">
+                    <div class="campaign_info-container">
+                       <vue-capmpaign_info :prop_name="name[0]" id="Docomo"　:prop_period="period[0]" :prop_info="info[0]"></vue-capmpaign_info>
+                       <vue-capmpaign_info :prop_name="name[1]" id="au"></vue-capmpaign_info>
+                       <vue-capmpaign_info :prop_name="name[2]" id="日本通信sim"></vue-capmpaign_info>
+                       <vue-capmpaign_info :prop_name="name[3]" id="RakuteMobile"></vue-capmpaign_info>
+                       <vue-capmpaign_info :prop_name="name[4]" id="UQmobile"></vue-capmpaign_info>
+                       <vue-capmpaign_info :prop_name="name[5]" id="mineo"></vue-capmpaign_info>
+                       <vue-capmpaign_info :prop_name="name[6]" id="iijmio"></vue-capmpaign_info>
+                    </div>
+                </div>
+
+
+            </div>
+        </main>
+        <vue-footer></vue-footer>
+    </div>
+    
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/Vue.js"></script>
+<script src="./js/JQuery.js"></script>
+</body>
+</html>

@@ -1,4 +1,8 @@
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 100px;
+  }
+
   .container {
     min-height: 100vh;
   }
@@ -10,23 +14,24 @@
     display: none;
     position: fixed;
     z-index: 10;
-    top: 40px;
+    top: 0.4rem;
   }
   .container .aside2 .aside-wrapper {
     width: 230px;
     height: 100vh;
-    border-right: 1px solid gray;
+    border-right: 0.01rem solid gray;
     background-color: #333;
   }
   .container .aside2 .aside-wrapper ul {
-    padding-top: 100px;
+    padding-top: 1rem;
   }
   .container .aside2 .aside-wrapper ul a {
     cursor: pointer;
+    font-size: 0.16rem;
     color: white;
   }
   .container .aside2 .aside-wrapper ul a li {
-    padding: 10px 10px 0;
+    padding: 0.1rem 0.1rem 0;
   }
   .container .top_bar {
     display: block;
@@ -50,11 +55,125 @@
     margin-left: 0;
     margin-top: 40px;
   }
-  .container .header .header-wrapper .top_menu ul a {
-    font-size: small;
+  .container .main .main-wrapper {
+    margin: calc(10vw + 40px) 0 0 0;
+  }
+  .container .main .main-wrapper .slides-wrapper {
+    width: 100vw;
+    margin-top: 1rem;
+    height: 300px;
+  }
+  .container .main .main-wrapper .slides-wrapper .slides-container .slide {
+    height: 300px;
+  }
+  .container .main .main-wrapper .phone_card-wrapper .phone_card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
+    gap: 0.2rem;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .container .main .main-wrapper .information-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container .main .main-wrapper .information-wrapper .information-container {
+    margin: 0 5%;
+  }
+  .container .main .main-wrapper .search_plan-wrapper {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
+  .container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table {
+    width: 100%;
+  }
+  .container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table .display1 {
+    width: 30%;
+  }
+  .container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table .display2 {
+    width: 70%;
+  }
+  .container .main .main-wrapper .plan_list-wrapper {
+    margin-top: 100px;
+  }
+  .container .footer .footer-wrapper {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+}
+@media (min-width: 1001px) {
+  .container .aside {
+    display: block;
+  }
+}
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 70px;
+  }
+
+  .container {
+    min-height: 100vh;
+  }
+  .container .aside {
+    display: none;
+  }
+  .container .aside2 {
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0.4rem;
+  }
+  .container .aside2 .aside-wrapper {
+    width: 230px;
+    height: 100vh;
+    border-right: 0.01rem solid gray;
+    background-color: #333;
+  }
+  .container .aside2 .aside-wrapper ul {
+    padding-top: 1rem;
+  }
+  .container .aside2 .aside-wrapper ul a {
+    cursor: pointer;
+    color: white;
+  }
+  .container .aside2 .aside-wrapper ul a li {
+    padding: 0.1rem 0.1rem 0;
+  }
+  .container .top_bar {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container .top_bar img {
+    width: 23px;
+    height: 28px;
+    background-color: white;
+  }
+  .container .header .header-wrapper {
+    margin-left: 0;
+    margin-top: 40px;
   }
   .container .main .main-wrapper {
-    margin: 70px 10px 0 10px;
+    margin: calc(10vw + 40px) 0 0 0;
+  }
+  .container .main .main-wrapper .slides-wrapper {
+    width: 100vw;
+    margin-top: 2rem;
+    height: 300px;
+  }
+  .container .main .main-wrapper .slides-wrapper .slides-container .slide {
+    height: 300px;
   }
   .container .main .main-wrapper .phone_card-wrapper .phone_card-container {
     display: grid;
@@ -65,16 +184,28 @@
     max-width: 80%;
     margin: 0 auto;
   }
+  .container .main .main-wrapper .information-wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .container .main .main-wrapper .information-wrapper .information-container {
     margin: 0 5%;
+  }
+  .container .main .main-wrapper .search_plan-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table {
+    width: 100%;
+  }
+  .container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table .display1 {
+    width: 30%;
+  }
+  .container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table .display2 {
+    width: 70%;
   }
   .container .footer .footer-wrapper {
     margin-left: 0;
     margin-top: 40px;
-  }
-}
-@media (min-width: 1001px) {
-  .container .aside {
-    display: block;
   }
 }/*# sourceMappingURL=responsive.css.map */

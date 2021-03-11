@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container" id="setVue">
+        <vue-header></vue-header>
+        <vue-aside></vue-aside>
+        <vue-aside2></vue-aside2>
+        <vue-top_bar></vue-top_bar>
+
+        <main class="main">
+            <div class="main-wrapper">
+                <div class="search_bar-wrapper">
+                    <div class="search_bar-container">
+                        <div class="search_bar">
+                            <select class="select_maker">
+                                <option value="" hidden>メーカーを選択</option>
+                                <option value="全て" id="all2">全て</option>
+                                <option value="Samsung">Samsung</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Xiaomi">Xiaomi</option>
+                                <option value="OPPO">OPPO</option>
+                                <option value="Google">Google</option>
+                            </select>
+                        </div>
+                        <div class="search_bar">
+                            <select class="select_speck">
+                                <option value="" hidden>性能を選択</option>
+                                <option value="price DESC">価格(昇順)</option>
+                                <option value="price ASC">価格(降順)</option>
+                                <option value="CPU DESC">CPU(昇順)</option>
+                                <option value="Camera DESC">カメラ(昇順)</option>
+                                <option value="Battery DESC">バッテリー(昇順)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button id="search">検索</button>  
+                        </div>
+                                                
+                    </div>
+                    <div class="condition">
+                        <span id="option1">検索条件:<?="$option1"?></span>
+                        <span id="option2"><?="$option2"?></span>
+                    </div>
+                </div>
+                <!-- <div class="phone_card-wrapper">
+                    <?php foreach($test as $value): ?>
+                        <div class="phone_card-container">
+                            <div class="phone-card">
+                                <img class="phone" src="<?= "$value[imgSrc]"?>" alt="" srcset="">
+                                <div>
+                                    <p><?= "$value[name]"?></p>
+                                    <table>
+                                        <tr>
+                                            <td><img src="./img/icon_yen.png"></td><td><?= "$value[price]円"?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="./img/icon_CPU.png"></td><td><?= "$value[CPU]"?></td>
+                                        </tr>
+                                        <tr>                    
+                                            <td><img src="./img/icon_Camera.png"></td><td><?= "$value[Camera]万画素"?></td>
+                                        </tr>
+                                        <tr>                    
+                                            <td><img src="./img/icon_Battery.png"></td><td><?= "$value[Battery]mAh"?></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div> 
+                    <?php endforeach;?>
+                </div> -->
+            </div>
+        </main>
+        <!-- <vue-footer></vue-footer> -->
+    </div>
+    
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/Vue.js"></script>
+<script src="./js/JQuery.js"></script>
+</body>
+</html>

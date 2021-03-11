@@ -2,20 +2,31 @@
     margin: 0;
     padding: 0;
 }
-li{
-    list-style: none;
+
+
+html{
+    font-size: 100px;
+}
+
+.heading{
+    color: black;
+    font-size: large;
+    font-weight: bolder;
+    margin-bottom: 0.4rem;
+    text-align: center;
 }
 
 
 .container{
     display: grid;
-    grid-template-rows: 60px 1fr auto;
+    grid-template-rows: 10vh 1fr auto;
     grid-template-columns: auto;
     grid-template-areas:
         "header"
         "main"
         "footer";
     min-height: 100vh;
+    font-size: 0.16rem;
    
     .top_bar{
         display: none;
@@ -29,33 +40,36 @@ li{
         position: fixed;
         width: 100%;
         z-index: 10;
+
         .header-wrapper{
-            margin-left: 230px;
+            margin-left: 2.3rem;
             margin-top: 0;
-            height: 60px; 
-            // background-color: red;
+            height: 10vh; 
+
             .top_menu{
                 background-color: #333;
+
                 ul{
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     
-                    
                     a{
-                        // background-color: blue;
                         cursor: pointer;
-                        line-height: 60px;
+                        font-size: 0.16rem;
+                        line-height: 10vh;
+                        height: 10vh;
                         width: 25%;
                         overflow: hidden;
                         position: relative;
-                        border-bottom: 5px solid goldenrod;
+                        border-bottom: 0.05rem solid goldenrod;
                         color: white;
                         z-index: 10;
-                       
+                        text-decoration: none;
+
                         &:before{
                             position: relative;
-                           z-index: -1;
+                            z-index: -1;
                             content: "";
                             position: absolute;
                             width: 100%;
@@ -74,26 +88,53 @@ li{
                         }
                     }
                 }
+            }         
+
+           
+        }
+    }
+
+    .aside{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        .aside-wrapper{
+            width: 2.3rem;
+            height: 100vw;
+            border-right: 0.01rem solid gray;
+            background-color: #333;
+           
+            ul{
+                cursor: pointer;
+                padding-top: 100px;
+
+                a{
+                    color: white;
+                    font-size: 0.16rem;
+
+                    li{
+                         padding: 0.1rem 0.1rem 0;
+                    }
+                       
+                }
             }
         }
     }
 
     .main{
         grid-area: main;
-        
+       
         .main-wrapper{
-            margin-left: 230px;
-           
-// background-color: green;
+            margin-left: 2.3rem;
+            
+            //index.html
             .slides-wrapper{
-                
-                width: 400px;
+                width: calc(100vw - 230px);
                 height: 400px;
-                margin: 0 auto;
-                margin-top: 40px;
+                margin-top: 0.4rem;
+               
                 .slides-container{
                     .slide{
-                       
                         object-fit: contain;
                         background-repeat: no-repeat;
                         height: 400px;
@@ -102,37 +143,43 @@ li{
             }
 
             .phone_card-wrapper{
-                margin-top: 30px;
+                margin-top: 0.3rem;
+
                 .phone_card-container{
-                    // background-color: rebeccapurple;
                     display: grid;
-                    grid-template-columns: repeat(3,30%);
+                    grid-template-columns: repeat(3,35%);
                     justify-content: center;
-                    gap: 20px;
+                    gap: 0.2rem;
                     width: 100%;
                     max-width: 60%;
                     margin: 0 auto;
+
+                    p{
+                        font-size: large;
+                    }
 
                     .phone_card{
                         cursor: pointer;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        flex-direction: row;
+                        flex-direction: column;
                         width: 100%;
-                        height: 100%;
-                        box-shadow: 1px 1px 3px;
+                        padding-top: calc(25% - 0.2rem);
+                        padding-bottom: calc(25% - 0.2rem);
                         background-color: goldenrod;
                         color: white;
                         
-                        &:before{
-                            display: block;
-                            content: "";
-                            padding-top: 100%;
-                        }
+                        // &:before{
+                        //     display: block;
+                        //     content: "";
+                        //     padding-top: 100%;
+                        // }
                         
                         img{
-                            margin-right: 5px;
+                            width: 1rem;
+                            height: 1rem;
+                            margin-bottom: 0.2rem;
                         }
                     }
 
@@ -145,26 +192,18 @@ li{
 
             .information-wrapper{
                  background-color: rgb(212, 209, 209);
-                 margin: 100px 0;
-                 padding: 40px 0;
+                 margin: 1rem 0;
+                 padding: 0.4rem 1rem;
 
                 .information-container{
                     color: gray;
-                    margin: 0 20%;
                     height: fit-content;
-                    min-height: 500px;
-
-                    .heading{
-                        color: black;
-                        font-size: larger;
-                        font-weight: bolder;
-                        margin-bottom: 40px;
-                        text-align: center;
-                    }
+                    min-height: 5rem;
 
                     .information{
-                        border-bottom: 1px solid rgb(241, 241, 241);
-                        padding: 15px 0;
+                        font-size: 0.16rem;
+                        border-bottom: 0.01rem solid rgb(241, 241, 241);
+                        padding: 0.15rem 0;
 
                         p{
                             cursor: pointer;
@@ -181,29 +220,193 @@ li{
                     }
                 }
             }
-        }
-    }
 
-    .aside{
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        .aside-wrapper{
-            width: 230px;
-            height: 100vh;
-            border-right: 1px solid gray;
-            background-color: #333;
-           
-            ul{
-                cursor: pointer;
-                padding-top: 100px;
+            //phone_plan.html
+            .search_plan-wrapper{
+                background-color: rgb(212, 209, 209);
+                padding: 0.4rem 1rem;
 
-                a{
-                    color: white;
-                    li{
-                         padding: 10px 10px 0;
+                .search_plan-container{
+                   text-align: center;
+                   font-size: 0.16rem;
+                   
+                    .plan_question{
+                        font-size: larger;
+                        margin-top: 0.4rem;
+
+                        p{
+                            margin-bottom: 0.01rem; 
+                        }
+                        
+                        ul{
+                            display:  flex;
+                            align-items: center;
+                            justify-content: center;
+                            list-style: none;
+
+                            li{
+                                cursor: pointer;
+                                margin: 0 0.01rem;
+                                background-color: white;
+                                padding: 0.05rem 5%;
+                                
+                            }
+                        }
                     }
-                       
+
+                    .plan_result{
+                        .result_btn{
+                            display: block;
+                            cursor: pointer;
+                            background-color: goldenrod;
+                            padding: 0.1rem 0;
+                            margin-top:0.5rem;
+                        }
+
+                        .result{
+                            width: 100%;
+                            margin: 0 auto;
+
+                            p{
+                                margin-bottom: 0.1rem;
+                                font-size: large;
+                            }
+
+                            table,td {
+                                border-collapse: collapse;
+                                border: 1px solid #333;
+                                text-align: center;
+                            }
+
+                            table{
+                                width: 100%;
+                                margin: 0 auto;
+                                .display1{
+                                    padding: 0.1rem;
+                                    width: 30%;
+                                }
+
+                                .display2{
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .plan_list-wrapper{
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 1rem;
+              
+
+                .plan_list-container{
+                    margin-bottom: 0.5rem;
+                    font-size: 0.16rem;
+                    .heading{
+                        margin-bottom: 0.2rem;
+                        text-align: left;
+                        border-bottom: 0.01rem solid goldenrod;
+                    }
+
+                    table,td {
+                        border-collapse: collapse;
+                        border: 0.01rem solid #333;
+                        text-align: center;
+                    }
+
+                    td{
+                        padding: 0.1rem;
+                    }
+                }
+            }
+
+            //phone_search.html
+            .search_bar-wrapper{
+                .search_bar-container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: fixed;
+                    width: 80%;
+                    margin: 0 auto;
+                    height: 1.5rem;
+                    top: 10vh;
+                    background-color: red;
+
+                    .search_bar{
+                        select{
+                            width: 20vw;
+                            min-width: 1.5rem;
+                            height: 0.5rem;
+                            font-size: 0.16rem;
+                        }
+                        
+                    }
+
+                    button{
+                        min-width: 0.5rem;
+                        width: 10vw;
+                        margin-left: 0.2rem;
+                    }
+                }
+            }
+
+            //phone_campaign.html
+            .capmpaign_list-wrapper{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+
+                .campaign_list-container{
+                    width: 60%;
+                    margin: 0 auto;
+                    padding: 0.1rem;
+                    border: 1px solid #333;
+                    p{
+                        border-bottom: 1px solid #333;
+                    }
+
+                    .campaign_list{
+                        margin-left: 0.32rem;
+                        margin-top: 0.2rem;
+                        list-style: decimal;
+
+                        a{
+                            font-weight: bold;
+                            color: black;
+
+                            li{
+                                margin: 0.15rem 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .campaign_info-wrapper{
+                .campaign_info-container{
+                    width: 80%;
+                    margin: 0 auto;
+                    .campaign_info{
+                        margin-bottom: 1rem;
+
+                        .heading{
+                            text-align: left;
+                            border-bottom: 5px solid goldenrod;
+                        }
+
+                        .text-container{
+                            margin-bottom: 0.2rem;
+                            .text{
+                                margin-left: 0.16rem;
+                            }
+                        }
+
+                        
+
+
+                    }
                 }
             }
         }
@@ -213,8 +416,24 @@ li{
         grid-area: footer;
         
         .footer-wrapper{
-            margin-left: 230px;
-background-color: yellow;
+            margin-left: 2.3rem;
+            padding: 1rem;
+            background-color: #333;
+            color: gray;
+            font-size: 0.16rem;
+
+            .img_origin{
+                p{
+                    margin-bottom: 0.05rem;
+                }
+
+                ul{
+                    list-style: none;
+                    li{
+                        color: lighten($color: #333, $amount: 20%);
+                    }
+                }
+            }
         }
         
     }

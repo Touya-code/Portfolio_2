@@ -3,16 +3,25 @@
   padding: 0;
 }
 
-li {
-  list-style: none;
+html {
+  font-size: 100px;
+}
+
+.heading {
+  color: black;
+  font-size: large;
+  font-weight: bolder;
+  margin-bottom: 0.4rem;
+  text-align: center;
 }
 
 .container {
   display: grid;
-  grid-template-rows: 60px 1fr auto;
+  grid-template-rows: 10vh 1fr auto;
   grid-template-columns: auto;
   grid-template-areas: "header" "main" "footer";
   min-height: 100vh;
+  font-size: 0.16rem;
 }
 .container .top_bar {
   display: none;
@@ -27,9 +36,9 @@ li {
   z-index: 10;
 }
 .container .header .header-wrapper {
-  margin-left: 230px;
+  margin-left: 2.3rem;
   margin-top: 0;
-  height: 60px;
+  height: 10vh;
 }
 .container .header .header-wrapper .top_menu {
   background-color: #333;
@@ -41,13 +50,16 @@ li {
 }
 .container .header .header-wrapper .top_menu ul a {
   cursor: pointer;
-  line-height: 60px;
+  font-size: 0.16rem;
+  line-height: 10vh;
+  height: 10vh;
   width: 25%;
   overflow: hidden;
   position: relative;
-  border-bottom: 5px solid goldenrod;
+  border-bottom: 0.05rem solid goldenrod;
   color: white;
   z-index: 10;
+  text-decoration: none;
 }
 .container .header .header-wrapper .top_menu ul a:before {
   position: relative;
@@ -66,17 +78,38 @@ li {
 .container .header .header-wrapper .top_menu ul a li {
   text-align: center;
 }
+.container .aside {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+}
+.container .aside .aside-wrapper {
+  width: 2.3rem;
+  height: 100vw;
+  border-right: 0.01rem solid gray;
+  background-color: #333;
+}
+.container .aside .aside-wrapper ul {
+  cursor: pointer;
+  padding-top: 100px;
+}
+.container .aside .aside-wrapper ul a {
+  color: white;
+  font-size: 0.16rem;
+}
+.container .aside .aside-wrapper ul a li {
+  padding: 0.1rem 0.1rem 0;
+}
 .container .main {
   grid-area: main;
 }
 .container .main .main-wrapper {
-  margin-left: 230px;
+  margin-left: 2.3rem;
 }
 .container .main .main-wrapper .slides-wrapper {
-  width: 400px;
+  width: calc(100vw - 230px);
   height: 400px;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 0.4rem;
 }
 .container .main .main-wrapper .slides-wrapper .slides-container .slide {
   -o-object-fit: contain;
@@ -85,63 +118,56 @@ li {
   height: 400px;
 }
 .container .main .main-wrapper .phone_card-wrapper {
-  margin-top: 30px;
+  margin-top: 0.3rem;
 }
 .container .main .main-wrapper .phone_card-wrapper .phone_card-container {
   display: grid;
-  grid-template-columns: repeat(3, 30%);
+  grid-template-columns: repeat(3, 35%);
   justify-content: center;
-  gap: 20px;
+  gap: 0.2rem;
   width: 100%;
   max-width: 60%;
   margin: 0 auto;
+}
+.container .main .main-wrapper .phone_card-wrapper .phone_card-container p {
+  font-size: large;
 }
 .container .main .main-wrapper .phone_card-wrapper .phone_card-container .phone_card {
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
-  box-shadow: 1px 1px 3px;
+  padding-top: calc(25% - 0.2rem);
+  padding-bottom: calc(25% - 0.2rem);
   background-color: goldenrod;
   color: white;
 }
-.container .main .main-wrapper .phone_card-wrapper .phone_card-container .phone_card:before {
-  display: block;
-  content: "";
-  padding-top: 100%;
-}
 .container .main .main-wrapper .phone_card-wrapper .phone_card-container .phone_card img {
-  margin-right: 5px;
+  width: 1rem;
+  height: 1rem;
+  margin-bottom: 0.2rem;
 }
 .container .main .main-wrapper .phone_card-wrapper .phone_card-container .phone_card:hover {
   background-color: #e4b849;
 }
 .container .main .main-wrapper .information-wrapper {
   background-color: #d4d1d1;
-  margin: 100px 0;
-  padding: 40px 0;
+  margin: 1rem 0;
+  padding: 0.4rem 1rem;
 }
 .container .main .main-wrapper .information-wrapper .information-container {
   color: gray;
-  margin: 0 20%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 500px;
-}
-.container .main .main-wrapper .information-wrapper .information-container .heading {
-  color: black;
-  font-size: larger;
-  font-weight: bolder;
-  margin-bottom: 40px;
-  text-align: center;
+  min-height: 5rem;
 }
 .container .main .main-wrapper .information-wrapper .information-container .information {
-  border-bottom: 1px solid #f1f1f1;
-  padding: 15px 0;
+  font-size: 0.16rem;
+  border-bottom: 0.01rem solid #f1f1f1;
+  padding: 0.15rem 0;
 }
 .container .main .main-wrapper .information-wrapper .information-container .information p {
   cursor: pointer;
@@ -153,31 +179,168 @@ li {
 .container .main .main-wrapper .information-wrapper .information-container .arrow {
   color: goldenrod;
 }
-.container .aside {
-  position: fixed;
-  z-index: 10;
-  top: 0;
+.container .main .main-wrapper .search_plan-wrapper {
+  background-color: #d4d1d1;
+  padding: 0.4rem 1rem;
 }
-.container .aside .aside-wrapper {
-  width: 230px;
-  height: 100vh;
-  border-right: 1px solid gray;
-  background-color: #333;
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container {
+  text-align: center;
+  font-size: 0.16rem;
 }
-.container .aside .aside-wrapper ul {
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_question {
+  font-size: larger;
+  margin-top: 0.4rem;
+}
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_question p {
+  margin-bottom: 0.01rem;
+}
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_question ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_question ul li {
   cursor: pointer;
-  padding-top: 100px;
+  margin: 0 0.01rem;
+  background-color: white;
+  padding: 0.05rem 5%;
 }
-.container .aside .aside-wrapper ul a {
-  color: white;
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result_btn {
+  display: block;
+  cursor: pointer;
+  background-color: goldenrod;
+  padding: 0.1rem 0;
+  margin-top: 0.5rem;
 }
-.container .aside .aside-wrapper ul a li {
-  padding: 10px 10px 0;
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result {
+  width: 100%;
+  margin: 0 auto;
+}
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result p {
+  margin-bottom: 0.1rem;
+  font-size: large;
+}
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table, .container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result td {
+  border-collapse: collapse;
+  border: 1px solid #333;
+  text-align: center;
+}
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table {
+  width: 100%;
+  margin: 0 auto;
+}
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table .display1 {
+  padding: 0.1rem;
+  width: 30%;
+}
+.container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table .display2 {
+  width: 50%;
+}
+.container .main .main-wrapper .plan_list-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.container .main .main-wrapper .plan_list-wrapper .plan_list-container {
+  margin-bottom: 0.5rem;
+  font-size: 0.16rem;
+}
+.container .main .main-wrapper .plan_list-wrapper .plan_list-container .heading {
+  margin-bottom: 0.2rem;
+  text-align: left;
+  border-bottom: 0.01rem solid goldenrod;
+}
+.container .main .main-wrapper .plan_list-wrapper .plan_list-container table, .container .main .main-wrapper .plan_list-wrapper .plan_list-container td {
+  border-collapse: collapse;
+  border: 0.01rem solid #333;
+  text-align: center;
+}
+.container .main .main-wrapper .plan_list-wrapper .plan_list-container td {
+  padding: 0.1rem;
+}
+.container .main .main-wrapper .search_bar-wrapper .search_bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 80%;
+  margin: 0 auto;
+  height: 1.5rem;
+  top: 10vh;
+  background-color: red;
+}
+.container .main .main-wrapper .search_bar-wrapper .search_bar-container .search_bar select {
+  width: 20vw;
+  min-width: 1.5rem;
+  height: 0.5rem;
+  font-size: 0.16rem;
+}
+.container .main .main-wrapper .search_bar-wrapper .search_bar-container button {
+  min-width: 0.5rem;
+  width: 10vw;
+  margin-left: 0.2rem;
+}
+.container .main .main-wrapper .capmpaign_list-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.container .main .main-wrapper .capmpaign_list-wrapper .campaign_list-container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0.1rem;
+  border: 1px solid #333;
+}
+.container .main .main-wrapper .capmpaign_list-wrapper .campaign_list-container p {
+  border-bottom: 1px solid #333;
+}
+.container .main .main-wrapper .capmpaign_list-wrapper .campaign_list-container .campaign_list {
+  margin-left: 0.32rem;
+  margin-top: 0.2rem;
+  list-style: decimal;
+}
+.container .main .main-wrapper .capmpaign_list-wrapper .campaign_list-container .campaign_list a {
+  font-weight: bold;
+  color: black;
+}
+.container .main .main-wrapper .capmpaign_list-wrapper .campaign_list-container .campaign_list a li {
+  margin: 0.15rem 0;
+}
+.container .main .main-wrapper .campaign_info-wrapper .campaign_info-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.container .main .main-wrapper .campaign_info-wrapper .campaign_info-container .campaign_info {
+  margin-bottom: 1rem;
+}
+.container .main .main-wrapper .campaign_info-wrapper .campaign_info-container .campaign_info .heading {
+  text-align: left;
+  border-bottom: 5px solid goldenrod;
+}
+.container .main .main-wrapper .campaign_info-wrapper .campaign_info-container .campaign_info .text-container {
+  margin-bottom: 0.2rem;
+}
+.container .main .main-wrapper .campaign_info-wrapper .campaign_info-container .campaign_info .text-container .text {
+  margin-left: 0.16rem;
 }
 .container .footer {
   grid-area: footer;
 }
 .container .footer .footer-wrapper {
-  margin-left: 230px;
-  background-color: yellow;
+  margin-left: 2.3rem;
+  padding: 1rem;
+  background-color: #333;
+  color: gray;
+  font-size: 0.16rem;
+}
+.container .footer .footer-wrapper .img_origin p {
+  margin-bottom: 0.05rem;
+}
+.container .footer .footer-wrapper .img_origin ul {
+  list-style: none;
+}
+.container .footer .footer-wrapper .img_origin ul li {
+  color: #666666;
 }/*# sourceMappingURL=index.css.map */
