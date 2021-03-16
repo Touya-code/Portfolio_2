@@ -126,12 +126,13 @@ html{
        
         .main-wrapper{
             margin-left: 2.3rem;
+            margin-top: 10vh;
             
             //index.html
             .slides-wrapper{
                 width: calc(100vw - 230px);
                 height: 400px;
-                margin-top: 0.4rem;
+               
                
                 .slides-container{
                     .slide{
@@ -298,16 +299,15 @@ html{
             .plan_list-wrapper{
                 width: fit-content;
                 margin: 0 auto;
-                margin-top: 1rem;
-              
-
+    
                 .plan_list-container{
                     margin-bottom: 0.5rem;
                     font-size: 0.16rem;
+
                     .heading{
                         margin-bottom: 0.2rem;
                         text-align: left;
-                        border-bottom: 0.01rem solid goldenrod;
+                        border-bottom: 5px solid goldenrod;
                     }
 
                     table,td {
@@ -324,22 +324,26 @@ html{
 
             //phone_search.html
             .search_bar-wrapper{
+                position: fixed;
+                top: 10vh;
+                width: calc(100% - 230px);
+                background-color: white;
+                border-bottom: 1px solid #333;
+
                 .search_bar-container{
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    position: fixed;
-                    width: 80%;
+                    width: calc(100% - 230px);
                     margin: 0 auto;
-                    height: 1.5rem;
-                    top: 10vh;
-                    background-color: red;
-
+                    height: 70px;
+                   
+            
                     .search_bar{
                         select{
                             width: 20vw;
                             min-width: 1.5rem;
-                            height: 0.5rem;
+                            height: 0.3rem;
                             font-size: 0.16rem;
                         }
                         
@@ -350,19 +354,68 @@ html{
                         width: 10vw;
                         margin-left: 0.2rem;
                     }
+
+                    
+                }
+                .condition{
+                    text-align: center;
+                }
+            }
+
+            .phone_data-wrapper{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, 340px);
+                justify-content: center;
+                column-gap: 0.3rem;
+                margin-top: calc(10vh + 70px);
+            
+                .phone_data-container{
+                    display: flex;
+                    flex-direction:row;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap:wrap;
+                    border-bottom: 1px solid rgb(209, 206, 206);
+                    margin-bottom: 0.01rem;
+
+                    .phone_data{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0.05rem;
+                        
+
+                        
+                        table{
+                            margin-left: 0.05rem; 
+                            height: 2rem;
+                            width: 100%;
+                        }
+
+                        .logo{
+                           width: 0.3rem;
+                           height: auto;
+                           background-color: goldenrod;
+                           border-radius: 50%;
+                        }
+
+                        .phone{
+                           width: 60%;
+                        }
+                    }
                 }
             }
 
             //phone_campaign.html
             .capmpaign_list-wrapper{
-                margin-top: 1rem;
-                margin-bottom: 1rem;
+                margin-bottom: 0.4rem;
 
                 .campaign_list-container{
                     width: 60%;
                     margin: 0 auto;
                     padding: 0.1rem;
                     border: 1px solid #333;
+
                     p{
                         border-bottom: 1px solid #333;
                     }
@@ -389,11 +442,12 @@ html{
                     width: 80%;
                     margin: 0 auto;
                     .campaign_info{
-                        margin-bottom: 1rem;
+                        margin-bottom: 0.5rem;
 
                         .heading{
                             text-align: left;
                             border-bottom: 5px solid goldenrod;
+                            margin-bottom: 0.2rem;
                         }
 
                         .text-container{

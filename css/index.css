@@ -105,11 +105,11 @@ html {
 }
 .container .main .main-wrapper {
   margin-left: 2.3rem;
+  margin-top: 10vh;
 }
 .container .main .main-wrapper .slides-wrapper {
   width: calc(100vw - 230px);
   height: 400px;
-  margin-top: 0.4rem;
 }
 .container .main .main-wrapper .slides-wrapper .slides-container .slide {
   -o-object-fit: contain;
@@ -242,7 +242,6 @@ html {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
-  margin-top: 1rem;
 }
 .container .main .main-wrapper .plan_list-wrapper .plan_list-container {
   margin-bottom: 0.5rem;
@@ -251,7 +250,7 @@ html {
 .container .main .main-wrapper .plan_list-wrapper .plan_list-container .heading {
   margin-bottom: 0.2rem;
   text-align: left;
-  border-bottom: 0.01rem solid goldenrod;
+  border-bottom: 5px solid goldenrod;
 }
 .container .main .main-wrapper .plan_list-wrapper .plan_list-container table, .container .main .main-wrapper .plan_list-wrapper .plan_list-container td {
   border-collapse: collapse;
@@ -261,21 +260,25 @@ html {
 .container .main .main-wrapper .plan_list-wrapper .plan_list-container td {
   padding: 0.1rem;
 }
+.container .main .main-wrapper .search_bar-wrapper {
+  position: fixed;
+  top: 10vh;
+  width: calc(100% - 230px);
+  background-color: white;
+  border-bottom: 1px solid #333;
+}
 .container .main .main-wrapper .search_bar-wrapper .search_bar-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  width: 80%;
+  width: calc(100% - 230px);
   margin: 0 auto;
-  height: 1.5rem;
-  top: 10vh;
-  background-color: red;
+  height: 70px;
 }
 .container .main .main-wrapper .search_bar-wrapper .search_bar-container .search_bar select {
   width: 20vw;
   min-width: 1.5rem;
-  height: 0.5rem;
+  height: 0.3rem;
   font-size: 0.16rem;
 }
 .container .main .main-wrapper .search_bar-wrapper .search_bar-container button {
@@ -283,9 +286,48 @@ html {
   width: 10vw;
   margin-left: 0.2rem;
 }
+.container .main .main-wrapper .search_bar-wrapper .condition {
+  text-align: center;
+}
+.container .main .main-wrapper .phone_data-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 340px);
+  justify-content: center;
+  -moz-column-gap: 0.3rem;
+       column-gap: 0.3rem;
+  margin-top: calc(10vh + 70px);
+}
+.container .main .main-wrapper .phone_data-wrapper .phone_data-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #d1cece;
+  margin-bottom: 0.01rem;
+}
+.container .main .main-wrapper .phone_data-wrapper .phone_data-container .phone_data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.05rem;
+}
+.container .main .main-wrapper .phone_data-wrapper .phone_data-container .phone_data table {
+  margin-left: 0.05rem;
+  height: 2rem;
+  width: 100%;
+}
+.container .main .main-wrapper .phone_data-wrapper .phone_data-container .phone_data .logo {
+  width: 0.3rem;
+  height: auto;
+  background-color: goldenrod;
+  border-radius: 50%;
+}
+.container .main .main-wrapper .phone_data-wrapper .phone_data-container .phone_data .phone {
+  width: 60%;
+}
 .container .main .main-wrapper .capmpaign_list-wrapper {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 }
 .container .main .main-wrapper .capmpaign_list-wrapper .campaign_list-container {
   width: 60%;
@@ -313,11 +355,12 @@ html {
   margin: 0 auto;
 }
 .container .main .main-wrapper .campaign_info-wrapper .campaign_info-container .campaign_info {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .container .main .main-wrapper .campaign_info-wrapper .campaign_info-container .campaign_info .heading {
   text-align: left;
   border-bottom: 5px solid goldenrod;
+  margin-bottom: 0.2rem;
 }
 .container .main .main-wrapper .campaign_info-wrapper .campaign_info-container .campaign_info .text-container {
   margin-bottom: 0.2rem;

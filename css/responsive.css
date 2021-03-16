@@ -56,11 +56,10 @@
     margin-top: 40px;
   }
   .container .main .main-wrapper {
-    margin: calc(10vw + 40px) 0 0 0;
+    margin: 10vh 0 0 0;
   }
   .container .main .main-wrapper .slides-wrapper {
     width: 100vw;
-    margin-top: 1rem;
     height: 300px;
   }
   .container .main .main-wrapper .slides-wrapper .slides-container .slide {
@@ -83,8 +82,8 @@
     margin: 0 5%;
   }
   .container .main .main-wrapper .search_plan-wrapper {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
   }
   .container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table {
     width: 100%;
@@ -95,8 +94,20 @@
   .container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table .display2 {
     width: 70%;
   }
-  .container .main .main-wrapper .plan_list-wrapper {
-    margin-top: 100px;
+  .container .main .main-wrapper .search_bar-wrapper {
+    width: 100%;
+    top: 10vh;
+  }
+  .container .main .main-wrapper .search_bar-wrapper .search_bar-container {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .container .main .main-wrapper .phone_data-wrapper {
+    grid-template-columns: repeat(auto-fit, 100vw);
+    margin-top: calc(10vh + 70px );
+  }
+  .container .main .main-wrapper .phone_data-wrapper .phone_data-container .phone_data .phone {
+    width: 40%;
   }
   .container .footer .footer-wrapper {
     margin-left: 0;
@@ -113,88 +124,6 @@
     font-size: 70px;
   }
 
-  .container {
-    min-height: 100vh;
-  }
-  .container .aside {
-    display: none;
-  }
-  .container .aside2 {
-    cursor: pointer;
-    display: none;
-    position: fixed;
-    z-index: 10;
-    top: 0.4rem;
-  }
-  .container .aside2 .aside-wrapper {
-    width: 230px;
-    height: 100vh;
-    border-right: 0.01rem solid gray;
-    background-color: #333;
-  }
-  .container .aside2 .aside-wrapper ul {
-    padding-top: 1rem;
-  }
-  .container .aside2 .aside-wrapper ul a {
-    cursor: pointer;
-    color: white;
-  }
-  .container .aside2 .aside-wrapper ul a li {
-    padding: 0.1rem 0.1rem 0;
-  }
-  .container .top_bar {
-    display: block;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    width: 100%;
-    height: 40px;
-    padding: 0 10px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .container .top_bar img {
-    width: 23px;
-    height: 28px;
-    background-color: white;
-  }
-  .container .header .header-wrapper {
-    margin-left: 0;
-    margin-top: 40px;
-  }
-  .container .main .main-wrapper {
-    margin: calc(10vw + 40px) 0 0 0;
-  }
-  .container .main .main-wrapper .slides-wrapper {
-    width: 100vw;
-    margin-top: 2rem;
-    height: 300px;
-  }
-  .container .main .main-wrapper .slides-wrapper .slides-container .slide {
-    height: 300px;
-  }
-  .container .main .main-wrapper .phone_card-wrapper .phone_card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  .container .main .main-wrapper .information-wrapper {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-  .container .main .main-wrapper .information-wrapper .information-container {
-    margin: 0 5%;
-  }
-  .container .main .main-wrapper .search_plan-wrapper {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
   .container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table {
     width: 100%;
   }
@@ -204,8 +133,16 @@
   .container .main .main-wrapper .search_plan-wrapper .search_plan-container .plan_result .result table .display2 {
     width: 70%;
   }
-  .container .footer .footer-wrapper {
-    margin-left: 0;
-    margin-top: 40px;
+  .container .main .main-wrapper .plan_list-wrapper {
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
+  }
+  .container .main .main-wrapper .campaign_info-wrapper {
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
+  }
+  .container .main .main-wrapper .campaign_info-wrapper .campaign_info-container {
+    width: 100%;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=responsive.css.map */

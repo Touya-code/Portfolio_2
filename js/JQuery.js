@@ -35,13 +35,19 @@ $(function(){
         $('.plan_question li').css({'background-color':'white','color':'black'});
     });
 
-    $('.phone_card').on("click",function(){
-        location.href="phone_search.html";
+   
+
+    $(document).on('click', '.phone_card', function() {
+        var value= $(this).attr('value');
+        var speck_text=$(this).children('p').text();
+        location.href='phone_search.php?maker='+encodeURIComponent('')+
+        "&speck="+encodeURIComponent(value)+"&speck_text="+encodeURIComponent(speck_text+'(昇順)');
     });
 
-
-
-
-
-  
+     $(document).on('click', '#phone_card', function() {
+        var value= $(this).attr('value');
+        var speck_text=$(this).children('p').text();
+        location.href='phone_search.php?maker='+encodeURIComponent('')+
+        "&speck="+encodeURIComponent(value)+"&speck_text="+encodeURIComponent(speck_text);
+    });
 });
