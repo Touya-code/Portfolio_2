@@ -20,7 +20,7 @@
         <main class="main">
             <div class="main-wrapper">
                <div class="plan_list-wrapper">
-                   <p class="heading">プラン一覧</p>
+                   <p class="heading">通信プラン一覧</p>
                     <div class="plan_docomo plan_list-container">
                         <p class="heading">docomo</p>
                         <table>
@@ -209,7 +209,7 @@
                 </div>
                 <div class="search_plan-wrapper">
                     <div class="search_plan-container">
-                         <p class="heading">プラン診断</p>
+                         <p class="heading">通信プラン診断</p>
                          <div class="plan_question question0">
                              <p>どちらを重視しますか？</p>
                              <ul>
@@ -262,5 +262,15 @@
 
 <script src="./js/Vue.js"></script>
 <script src="./js/JQuery.js"></script>
+<script>
+    var url = new URL(window.location.href);
+    var params = url.searchParams;
+
+    if (params.get('value') == '0') {
+        var element = document.documentElement;
+        var bottom = element.scrollHeight - element.clientHeight - 350;
+        window.scroll(0, bottom);
+    }
+</script>
 </body>
 </html>

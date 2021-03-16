@@ -127,6 +127,15 @@
             pauseOnFocus:false,
         });
     });
+
+    var url = new URL(window.location.href);
+    var params = url.searchParams;
+
+    if (params.get('value') == '0') {
+        var element = document.documentElement;
+        var bottom = element.scrollHeight - element.clientHeight - 350;
+        window.scroll(0, bottom);
+    }
 </script>
 </body>
 </html>

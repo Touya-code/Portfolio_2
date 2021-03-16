@@ -16,26 +16,31 @@
             display: none;
             position: fixed;
             z-index: 10;
-            top: 0.4rem;
+            top: 40px;
 
             .aside-wrapper{
                 width: 230px;
                 height: 100vh;
                 border-right: 0.01rem solid gray;
                 background-color: #333;
+                padding-top: 10vh;
+
+                .aside_list{
+                    display: none;
+                    padding-left: 0.32rem;
+                }
                
                 ul{
-                    padding-top: 1rem;
-    
+                    list-style: none;
+                    border-bottom: 1px solid gray;
+                    
                     a{
                         cursor: pointer;
                         font-size: 0.16rem;
                         color: white;
-
-                        li{
-                             padding: 0.1rem 0.1rem 0;
-                        }
-                           
+                        display: block;
+                        padding: 0.1rem 0.1rem ;
+                       
                     }
                 }
             }

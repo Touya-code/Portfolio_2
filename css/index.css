@@ -84,21 +84,26 @@ html {
   top: 0;
 }
 .container .aside .aside-wrapper {
-  width: 2.3rem;
-  height: 100vw;
+  width: 230px;
+  height: 100vh;
   border-right: 0.01rem solid gray;
   background-color: #333;
+  padding-top: 10vh;
+}
+.container .aside .aside-wrapper .aside_list {
+  display: none;
+  padding-left: 0.32rem;
 }
 .container .aside .aside-wrapper ul {
-  cursor: pointer;
-  padding-top: 100px;
+  list-style: none;
+  border-bottom: 1px solid gray;
 }
 .container .aside .aside-wrapper ul a {
-  color: white;
+  cursor: pointer;
   font-size: 0.16rem;
-}
-.container .aside .aside-wrapper ul a li {
-  padding: 0.1rem 0.1rem 0;
+  color: white;
+  display: block;
+  padding: 0.1rem 0.1rem;
 }
 .container .main {
   grid-area: main;

@@ -7,7 +7,7 @@ Vue.component('vue-header', {
                         <a :href="'index.html'"><li>スマートフォン</li></a>
                         <a :href="'phone_plan.html'"><li>通信プラン</li></a>
                         <a :href="'phone_campaign.html'"><li>キャンペーン</li></a>
-                        <a :href="'phone_plan.html'"><li>動作確認</li></a>
+                        <a :href="'operation_check.html'"><li>動作確認</li></a>
                     </ul>
                 </div>
             </div>
@@ -20,11 +20,24 @@ Vue.component('vue-header', {
         <aside :class="'aside'">
             <div :class="'aside-wrapper'">
                 <ul>
-                    <a><li>Apple</li></a>
-                    <a><li>Samsung</li></a>
-                    <a><li>OPPO</li></a>
-                    <a><li>Xiaomi</li></a>
-                    <a><li>Google</li></a>
+                    <a :class="'aside_drawer1'"><li>➤スマートフォン</li></a>
+                    <div :class="'aside_list1 aside_list'">
+                        <a :class="'inner_list1'"><li>スマホ検索</li></a>
+                        <a :class="'inner_list2'"><li>スマホの選び方</li></a> 
+                    </div>
+                </ul>
+                <ul>
+                    <a :class="'aside_drawer2'"><li>➤通信プラン</li></a>
+                    <div :class="'aside_list2 aside_list'">
+                        <a :class="'inner_list1'"><li>通信プラン一覧</li></a>
+                        <a :class="'inner_list2'"><li>通信プラン診断</li></a>
+                    </div>
+                </ul>
+                <ul>
+                    <a :class="'camoaign'"><li>キャンペーン</li></a>
+                </ul>
+                <ul>
+                    <a :class="'check'"><li>動作確認</li></a>
                 </ul>
             </div>
         </aside>
@@ -36,11 +49,24 @@ Vue.component('vue-header', {
         <aside :class="'aside2'">
             <div :class="'aside-wrapper'">
                 <ul>
-                    <a><li>Apple</li></a>
-                    <a><li>Samsung</li></a>
-                    <a><li>OPPO</li></a>
-                    <a><li>Xiaomi</li></a>
-                    <a><li>Google</li></a>
+                    <a :class="'aside_drawer1'"><li>➤スマートフォン</li></a>
+                    <div :class="'aside_list1 aside_list'">
+                        <a :class="'inner_list1'"><li>スマホ検索</li></a>
+                        <a :class="'inner_list2'"><li>スマホの選び方</li></a> 
+                    </div>
+                </ul>
+                <ul>
+                    <a :class="'aside_drawer2'"><li>➤通信プラン</li></a>
+                    <div :class="'aside_list2 aside_list'">
+                        <a :class="'inner_list1'"><li>通信プラン一覧</li></a>
+                        <a :class="'inner_list2'"><li>通信プラン診断</li></a>
+                    </div>
+                </ul>
+                <ul>
+                    <a :class="'campaign'"><li>キャンペーン</li></a>
+                </ul>
+                <ul>
+                    <a :class="'check'"><li>動作確認</li></a>
                 </ul>
             </div>
         </aside>
