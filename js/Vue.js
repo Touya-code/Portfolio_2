@@ -34,7 +34,7 @@ Vue.component('vue-header', {
                     </div>
                 </ul>
                 <ul>
-                    <a :class="'camoaign'"><li>キャンペーン</li></a>
+                    <a :class="'campaign'"><li>キャンペーン</li></a>
                 </ul>
                 <ul>
                     <a :class="'check'"><li>動作確認</li></a>

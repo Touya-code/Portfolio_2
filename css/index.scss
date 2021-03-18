@@ -159,6 +159,7 @@ html{
                     width: 100%;
                     max-width: 60%;
                     margin: 0 auto;
+                   
 
                     p{
                         font-size: large;
@@ -461,10 +462,34 @@ html{
                                 margin-left: 0.16rem;
                             }
                         }
+                    }
+                }
+            }
 
-                        
+            .use_tech-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .use_tech-container{
+                    .heading{
+                        border-bottom: 1px solid goldenrod;
+                    }
 
+                    ul{
+                        list-style: none;
+                    }
+                }
+                
+            }
 
+            .video-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .video{
+                    .heading{
+                        border-bottom: 1px solid goldenrod;
                     }
                 }
             }

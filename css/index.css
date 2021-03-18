@@ -373,6 +373,25 @@ html {
 .container .main .main-wrapper .campaign_info-wrapper .campaign_info-container .campaign_info .text-container .text {
   margin-left: 0.16rem;
 }
+.container .main .main-wrapper .use_tech-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .main .main-wrapper .use_tech-wrapper .use_tech-container .heading {
+  border-bottom: 1px solid goldenrod;
+}
+.container .main .main-wrapper .use_tech-wrapper .use_tech-container ul {
+  list-style: none;
+}
+.container .main .main-wrapper .video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .main .main-wrapper .video-container .video .heading {
+  border-bottom: 1px solid goldenrod;
+}
 .container .footer {
   grid-area: footer;
 }
